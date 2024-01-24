@@ -1,4 +1,4 @@
-x_1 = readNPY("xk_with_inequality_constraint.npy");
+x_1 = readNPY("xk_with_inequality_constraint_1.npy");
 x_2 = readNPY("xk_without_inequality_constraint.npy");
 mat = load("hw2_prob2.mat");
 A = mat.A;
@@ -12,3 +12,4 @@ hold on
 plot(dvh_ptv_2);
 
 hold off
+legend("with inequality constraint","without inequality constraint" )
