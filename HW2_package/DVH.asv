@@ -39,21 +39,21 @@ dvh_ptv_x_12_10 = get_DVH_PTV(A, x_12_10);
 dvh_ptv_x_12_15 = get_DVH_PTV(A, x_12_15);
 dvh_ptv_x_12_20 = get_DVH_PTV(A, x_12_20);
 
-dvh_ptv_x_14_10 = get_DVH_PTV(A, x_14_10);
-dvh_ptv_x_14_15 = get_DVH_PTV(A, x_14_15);
-dvh_ptv_x_14_20 = get_DVH_PTV(A, x_14_20);
+dvh_ptv_x_10_10 = get_DVH_PTV(A, x_14_10);
+dvh_ptv_x_10_15 = get_DVH_PTV(A, x_14_15);
+dvh_ptv_x_10_20 = get_DVH_PTV(A, x_10_20);
 
-dvh_ptv_x_16_10 = get_DVH_PTV(A, x_16_10);
-dvh_ptv_x_16_15 = get_DVH_PTV(A, x_16_15);
-dvh_ptv_x_16_20 = get_DVH_PTV(A, x_16_20);
+dvh_ptv_x_10_10 = get_DVH_PTV(A, x_10_10);
+dvh_ptv_x_10_15 = get_DVH_PTV(A, x_10_15);
+dvh_ptv_x_10_20 = get_DVH_PTV(A, x_10_20);
 
-dvh_ptv_x_18_10 = get_DVH_PTV(A, x_18_10);
-dvh_ptv_x_18_15 = get_DVH_PTV(A, x_18_15);
-dvh_ptv_x_18_20 = get_DVH_PTV(A, x_18_20);
+dvh_ptv_x_10_10 = get_DVH_PTV(A, x_10_10);
+dvh_ptv_x_10_15 = get_DVH_PTV(A, x_10_15);
+dvh_ptv_x_10_20 = get_DVH_PTV(A, x_10_20);
 
-dvh_ptv_x_20_10 = get_DVH_PTV(A, x_20_10);
-dvh_ptv_x_20_15 = get_DVH_PTV(A, x_20_15);
-dvh_ptv_x_20_20 = get_DVH_PTV(A, x_20_20);
+dvh_ptv_x_10_10 = get_DVH_PTV(A, x_10_10);
+dvh_ptv_x_10_15 = get_DVH_PTV(A, x_10_15);
+dvh_ptv_x_10_20 = get_DVH_PTV(A, x_10_20);
 
 
 plot(dvh_ptv_1);
@@ -63,5 +63,4 @@ hold on
 plot(dvh_ptv_2);
 
 hold off
-
 legend("with inequality constraint","without inequality constraint" )
