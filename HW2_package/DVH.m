@@ -1,19 +1,33 @@
 
 % 변수 할당
-x_H = readNPY("./x_H.npy");
-x_nH = readNPY("./x_nH.npy");
+x_logb = readNPY("./logb.npy");
+x_Hlogb = readNPY("./Hlogb.npy");
+x_nH_nG_logb = readNPY("./nH_nG_logb.npy");
+x_H_nG_logb = readNPY("./H_nG_logb.npy");
+
 mat = load("hw2_prob2.mat");
 A = mat.A;
 
 
 % DVH
-dvh_ptv_x_H = get_DVH_PTV(A, x_H);
+dvh_ptv_x_logb = get_DVH_PTV(A, x_logb);
+dvh_ptv_x_Hlogb= get_DVH_PTV(A, x_Hlogb);
+dvh_ptv_x_nH_nG_logb = get_DVH_PTV(A, x_nH_nG_logb);
+dvh_ptv_x_H_nG_logb = get_DVH_PTV(A, x_H_nG_logb);
 
-dvh_ptv_x_nH = get_DVH_PTV(A, x_nH);
+figure(1) 
+hold on;
 
-figure(1)
-plot(dvh_ptv_x_H, 'LineWidth',2, 'LineStyle','-'); hold on; 
-plot(dvh_ptv_x_nH, 'LineWidth', 2, "LineStyle",":"); hold on; 
+% 첫 번째 플롯
+plot(dvh_ptv_x_logb, 'LineWidth', 2, 'LineStyle', '-', 'Color', [0 0 1]); % 파란색 실선
+% 두 번째 플롯
+plot(dvh_ptv_x_Hlogb, 'LineWidth', 2, 'LineStyle', '--', 'Color', [1 0 0]); % 빨간색 점선
+% 세 번째 플롯
+plot(dvh_ptv_x_nH_nG_logb, 'LineWidth', 2, 'LineStyle', ':', 'Color', [0 1 0]); % 녹색 점선
+% 네 번째 플롯
+plot(dvh_ptv_x_H_nG_logb, 'LineWidth', 2, 'LineStyle', '-.', 'Color', [0 0 0]); % 검은색 대시-점선
+
+% 라벨 및 범례 추가
+legend({'DVH PTV X LogB', 'DVH PTV X HLogB', 'DVH PTV X nH nG LogB', 'DVH PTV X H nG LogB'}, 'Location', 'best');
 
 hold off;
-legend("without","t= 1.0 iter=10e3","t= 1.0 iter=15e3","t= 1.0 iter=20e3")
